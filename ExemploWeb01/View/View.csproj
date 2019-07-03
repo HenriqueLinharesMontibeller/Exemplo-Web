@@ -94,6 +94,7 @@
   <ItemGroup>
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\ColaboradorController.cs" />
+    <Compile Include="Controllers\EstoqueController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -103,6 +104,10 @@
     <Content Include="Views\web.config" />
     <None Include="packages.config" />
     <Content Include="Views\Colaborador\Index.cshtml" />
+    <Content Include="Views\Colaborador\Cadastro.cshtml" />
+    <Content Include="Views\Estoque\Index.cshtml" />
+    <Content Include="Views\Estoque\Cadastro.cshtml" />
+    <Content Include="Views\Estoque\Editar.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -113,6 +118,16 @@
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Models\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Model\Model.csproj">
+      <Project>{4bd11b51-a290-4946-917c-b414da36098a}</Project>
+      <Name>Model</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Repository\Repository.csproj">
+      <Project>{99e01343-00c1-47a2-be4e-f50624e38e1d}</Project>
+      <Name>Repository</Name>
+    </ProjectReference>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
